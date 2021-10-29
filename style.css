@@ -1,0 +1,95 @@
+*{
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+
+  --black: hsl(240, 6%, 13%); /* variaveis */
+  --grey: hsl(240, 9%, 89%);
+
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+main{
+  background: url(images/background.svg);
+  width: 375px;
+  height: 812px;
+  text-align: center;
+}
+.container{
+  max-width: 250px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--grey);
+}
+.avatar{
+  position: relative;
+
+  width: 10rem;
+  margin: 11.5rem auto 0;
+}
+/* pega só oq ta dentro do span */
+.avatar span{
+  position: absolute; /*fica acima dos outros*/
+  margin-top: -15px;
+  z-index: 1; /* posição no eixo z, saindo da tela*/
+}
+/* pega o que ta no primeiro nivel */
+.avatar > img{
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover;
+
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); /* corta a imagem */
+}
+
+h1 {
+  font-size: 1.5rem;
+
+  margin-top: 1.5rem;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+
+  color: var(--grey);
+  text-decoration: none;
+
+  margin-top: 0.25rem;
+}
+
+p {
+  margin-top: 2rem;
+}
+
+button {
+  margin-top: 2rem;
+  background: #323238;
+  color:var(--grey);
+  border: none;
+  padding: 0.5rem 0.5rem;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+ul {
+  margin-top: 4rem;
+
+  list-style: none;
+  padding: 0;
+  
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  
+}
